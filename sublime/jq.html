@@ -1,0 +1,194 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+
+	<script>
+	// $('body').html('hello world'); --> -->
+	
+// $('body').html('12345');
+
+// console.log($);
+// $(document).ready(function(){
+// var content=$('div').html();
+// alert(content);
+// });
+
+
+// $(window).load(function(){
+// 	alert("window is ready");
+// });
+
+// $(document).ready(function(){
+// alert("dom is ready");
+// });
+
+// $(document).ready(function(){
+// $('div').click(function(){
+// alert('what you doing bro');
+// });
+// });
+// $(document).ready(function(){
+// $('div').dblclick(function(){
+// alert('what you doing bro');
+// });
+// });
+
+// $(document).ready(function(){
+// $('input').change(function(){
+// 	alert('you just changed');
+// });
+	
+// });
+
+// $(document).ready(function(){
+// var t="<p>hello world</p>";
+// $('input').after(t); 
+// });
+
+// CSS
+// $(document).ready(function(){
+// $('li').eq(2).css({
+// "background":"red",
+// "color":"white",
+// });
+// });
+
+// $(document).ready(function(){
+// $('mydiv').mouseenter()
+// });
+
+// function createadiv(){
+// 	var div="<div class='d'>i am bon</div>";
+// 	$('button').after(div);
+// }
+
+
+// function callthisdiv(){
+// 	alert('you just clicked me');
+// }
+// $(document).ready(function(){
+// $('button').click(createadiv);
+
+// $(document).on('click','d',callthisdiv)
+// });
+
+// $(document).ready(function(){
+// $('#myform').submit(function(){
+// alert('you are submiting me');
+// return false; 
+// });
+// });
+
+//$(function(){
+/*$('#next').click(function(){
+var ad=$('div.active');
+$(ad).removeClass('active');
+$(ad).
+});
+});*/
+
+//AJAX
+// $(function(){
+// $.ajax({
+// 	type:"GET",
+// url:"load.txt"
+// }).done(function(data,statusCode){
+// alert(statusCode);
+// }).fail(function(data,statusCode){
+// alert(statusCode);
+// });
+// });
+// 	$(function(){
+// $.get('http://www.google.com',function(data){
+// $('textarea').text(data);
+// });
+// 	});
+
+$(function(){
+$('#togglethis').click(function(){
+	$('#content').slideToggle(200);
+});
+});
+
+
+
+</script>
+<style>
+	
+	#togglethis{
+		padding: 10px;
+		width:100%;
+	background: #eee;
+	border:1px solid black;
+	text-align: center;
+	}
+
+	#content{
+		padding:15px;
+		width:100%;
+		text-align: center;
+	font-size: 20px;
+	display: none;
+	background: black;
+	color: white;
+	}
+</style>
+</head>
+<body>
+<div id="mydiv"></div>
+
+
+<div id="togglethis">click Here</div>
+<div id="content">this is some secret</div>
+
+<!-- <div id="news">
+	<div class="newst active">this is my sentence 1</div>
+<div class="newst">this is my sentence 2</div>
+<div class="newst">this is my sentence 3</div>
+<div class="newst">this is my sentence 4</div>
+<div class="newst">this is my sentence 5</div>
+<div class="newst">this is my sentence 6</div>
+<div class="newst">this is my sentence 7</div>
+</div><br><br>
+
+<span id="next">Next</span> ||
+<span id="prev">Previous</span>
+
+ --><!-- <form id="myform">
+	<label> Name:</label>
+		<input type='text' class="name" ><br>
+	<label> Email:</label>
+		<input type='text' class="email" >
+<input type="submit" value="go">	
+</form>
+ -->
+
+
+
+
+
+
+<!-- <button>create a div</button>
+ -->
+<!-- <div id="mydiv">
+i am in div 1
+</div>
+<div id="mydiv1">
+
+</div>
+
+input type="text">
+<div id="hello">hello world</div>
+
+<ul>
+<li>pradeep</li>
+<li>sing</li>
+<li>negi</li>
+<li></li>
+<li></li>
+</ul>
+ -->
+
+</body>
+</html>

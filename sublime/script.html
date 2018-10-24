@@ -1,0 +1,203 @@
+<html>
+<head>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	
+	#hours{
+		color: red;
+	font-size: 150px;
+	font-style: italic;
+	margin-left: 400px;
+
+  animation-direction: reverse; 
+
+	}
+	#minute{
+color: yellow;
+	font-size: 150px;
+	font-style: italic;
+}
+#seconds{
+color: green;
+	font-size: 150px;
+	font-style: italic;
+
+}
+#dot{
+font-size: 150px;
+	font-style: italic;	
+}
+</style>
+<body>
+
+<!-- 	<h5>you content goes here</h5>
+	<b><li id="p"></li></b>
+ --><!--<input type="text" value="123" onclick="aNotify(this)">-->
+<div id="clock">
+	<span id="hours"></span><span id="dot">:</span><span id="minute"></span><span id=dot>:</span>
+<span id="seconds"></span>
+</div>
+
+
+<div id="open">
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+</div></div>
+
+
+
+
+
+
+
+<form name="myform">
+<input type="text" name="text">
+<input type="submit" onclick="return valid()" value="submit">
+</form>
+
+<script>
+
+function valid(){
+
+var x=document.forms["myform"]["text"].value;
+if(x==" "){
+	text="null is not allowed";
+}else{
+	text="fine";
+}
+}
+
+// setTimeout(function(){
+// $('#myModal').modal('show');
+// },2000);
+
+
+
+ 
+function clock(){
+	var date=new Date();
+
+	var hours=date.getHours();
+	var minute=date.getMinutes();
+	var seconds=date.getSeconds();
+
+	document.getElementById('hours').innerText=hours;
+	document.getElementById('minute').innerText=minute;
+document.getElementById('seconds').innerText=seconds;
+}
+clock();
+setInterval(clock,1000);
+
+
+/*	function num(x, y){
+		this.x=x;
+		this.y=y;
+		this.sum=function(){
+			return this.x+this.y;
+		}
+	}*/
+// var my=new num(3,4);
+// console.log(my.toString());
+
+// function aNotify(e){
+// 	alert('you just entered :'+e.value);
+// 	console.log("i am being clicked");
+// }
+
+// function add(){
+// 	var a=10;
+// 	var b=20;
+// 	var c=a+b;
+// 	prompt("enter your name");
+// alert(c);
+// }
+
+
+// var arr=[1,2,3,4,5,6];
+// var arr1=[5,4,3,2,1];
+// //alert(arr[0]);
+
+// var final=arr.concat(arr1);
+// console.log(final);
+
+// var programming=['c++','atarri','python','java','c#','ruby','pearl'];
+
+// programming.unshift();
+// console.log(programming.sort());
+// document.getElementById('p').innerHTML = programming;
+
+// var Str="hello world";
+// console.log(typeof(Str));
+
+// var num=new Number(12345);
+// console.log(typeof(num));
+// document.write(num);
+
+ // var obj={
+
+ // name:'hello',
+ //  name1:'world',
+ // fun:function(){
+	// return this.name+this.name1;
+ // }};
+ // document.write(obj.name);
+
+
+// for(i=1;i<11;i++){
+// 	document.write(i*3);
+// }
+
+// var i=20;
+// while(true){
+// 	if(i==10){
+// 		break;
+// 	}i++;
+// 	document.write('hello world <br>');
+// }
+
+// var a=20000;
+// do{
+// 	document.write('hello');
+// }while(i<10);
+
+
+// var i=0;
+// var arr=['hello','my','name pradeep'];
+
+// for( i in arr){
+// document.write(arr[i]);
+// }
+
+// var arr={name:'vandycandy'};
+// document.write(arr.name);
+
+
+// var number=['20','5','10','15','2','30','25'];
+// document.write('without sorting'+number);
+// console.log(number.length);
+// document.write('with sorting'+number.sort());
+
+
+
+
+</script>
+</body>
+</html>

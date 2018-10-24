@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style >
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+		body{
+			background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SyAQk_h2it91ahbh/videoblocks-young-it-programmer-prints-the-code-on-the-computer-in-dark-office-room_r3mxxxkoox_thumbnail-full01.png"); 
+		background-size: cover;
+		}
+
+		#popupmain{
+			position:fixed;
+			width: 100%;
+			height: 100%;
+			background: rgba(255,255,255,0.4);
+		z-index:1001;
+		
+		}
+
+		#popup{
+			width: 500px;
+			height: 250px;
+			background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://cdn-images-1.medium.com/max/2000/1*5TRuG7tG0KrZJXKoFtHlSg.jpeg");
+		background-size: cover;
+		color:white;
+		/*background-color: black;*/
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);	
+		box-shadow: 1px 2px 5px 3px black;
+		text-align: center;
+		}
+		#newsHeadding{
+			transform: translateY(60px);
+
+		}
+		#emailId{
+			width: 70%;
+			padding: 7px;
+margin-top: 60px;
+margin-bottom: 20px;
+
+		}
+		.submitId{
+			background-color: #0fc0fa;
+			border:none;
+			font-size: 1rem;
+			padding: 0.6rem;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<div id="popupmain"style="display: none;">
+<div id="popup">
+<h1 id="newsHeadding">Subscribe to out Newsletter</h1>
+<input type="text" name="" id="emailId" placeholder="user@example.com"><br>
+<button class="submitId">Subscribe</button>
+<button class="submitId">No Thanks</button>
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		setTimeout(function(){
+$('#popupmain').show('slow');
+
+$('#popupmain').css('display','block');
+
+		},2000);
+	});
+	$('.submitId').click(function(){
+$('#popupmain').css('display','none');
+
+	})
+</script>
+</body>
+</html>

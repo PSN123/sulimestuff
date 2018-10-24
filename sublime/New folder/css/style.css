@@ -1,0 +1,10 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+header{
+	background-image: url('../images/cupps.jpg');
+background-size: cover;
+height:100vh;
+}

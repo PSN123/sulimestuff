@@ -1,0 +1,24 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<script>
+   
+ 
+ $.getJSON("https://api.themoviedb.org/3/search/movie?api_key=370be6972dc90780d69d3fb2e0571d2a&language=en-US&query=Black%20Panther&page=1&include_adult=false").then(function(result)
+ {
+console.log(result);            
+$("#Tittle").text(result.results[0].title);
+$("#img").text(result.results[0].poster_path);
+$("#overview").text(result.results[0].overview);
+$("#").text(result.results[0].) 
+ }); 
+ </script>
+
+<body> 
+<h1 id="Tittle"></h1>
+<h1 id="img"></h1>
+<img height="500px" src="https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg">
+<P id="overview"></p>
+ </body>
+</html>

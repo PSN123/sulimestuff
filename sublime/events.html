@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery Events</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<p class="main">
+<p id="p1">she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she</p><p id="p2"> is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl</p> <p id="p3">she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl she is goog girsl </p>
+</p>
+<form>
+	<label>username</label>
+<input type="text" name="user" id="textbox">
+<span id="showdata">welcome</span>
+<span id="showdataforblur">Takecare</span>
+
+</form>
+
+
+<h1>hello wrold \:)</h1>
+<button id="but">click me</button>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#but').click(function(){
+$('.main,#p1,#p2,#p3').toggle('slow');
+});
+});
+
+
+
+// $(document).ready(function(){
+// $('span').css('display','none');
+// $('#textbox').focus(function(){
+// $('#showdata').css('display','inline').fadeOut(4000);
+// });
+// $('#textbox').blur(function(){
+// $('#showdataforblur').css('display','inline').fadeOut(4000);
+// });
+
+// });
+
+
+
+// $(document).ready(function(){
+// //$('h1').mouseleave(function(){
+// $('h1').mouseenter(function(){
+
+// 	$(this).css('color','red');
+// })
+// });
+
+
+
+// $(document).ready(function(){
+// //$('input').keypress(function(){
+// //$('input').keydown(function(){
+// $('input').keyup(function(){
+
+// $(this).css('background-color','red');
+// });
+// });
+
+/*	$(document).ready(function(){
+$('#but').click(function(){
+$('p').css({
+
+});
+});
+	});*/
+
+// $(document).ready(function(){
+// $('#but').click(function(){
+// $('#p1').css('background-color','red');
+// });
+// $('#but').dblclick(function(){
+// $('#p3').css('background-color','blue');
+// $('#p3').hide('slow');
+
+// });
+// $('#but').click(function(){
+// $('#p3').show('slow');
+	
+
+//})
+
+//});
+
+
+
+
+</script>
+</body>
+</html>>
+
+
+
+
+
+
+
+

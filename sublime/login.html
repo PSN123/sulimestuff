@@ -1,0 +1,107 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="login-button">Login with Google</button>
+
+<div id="user_information">
+	<div>
+		<label>Name</label>
+		<span></span>
+	</div>
+<div>
+		<label>ID</label>
+		<span></span>
+	</div>
+	<div>
+		<label>Gender</label>
+		<span></span>
+	</div>
+	<div>
+		<label>Picture</label>
+		<span></span>
+	</div>
+	<div>
+		<label>Email</label>
+		<span></span>
+	</div>
+
+</div>
+
+<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handle()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+<script>
+function handle(){
+
+gapi.load('client:auth2',{
+ callback:function(){
+ 	gapi.client.init({
+ 		apikey:'AIzaSyDpo5CkHziP-Jo8H4dKHcsDwVuelbR1Lzg',
+ 		clientId:'754891257947-o4glstigh7g11ol2afs9gak8am967072.apps.googleusercontent.com',
+ 
+scope:'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email & https://www.googleapis.com/auth/plus.me.'
+ 	}).then(
+
+function(success){
+
+},
+function(error){
+
+}
+
+ 	);
+ },
+ onerror:function(){
+
+ }
+
+});
+
+
+}
+
+$("#login-button").on('click', function() {
+	//$("#login-button").attr('disabled', 'disabled');
+			
+	// API call for Google login
+	gapi.auth2.getAuthInstance().signIn().then(
+		// On success
+		function(success) {
+			// API call to get user information
+			gapi.client.request({ path: 'https://www.googleapis.com/plus/v1/people/me' }).then(
+				// On success
+				function(success) {
+					console.log(success);
+					var user_info = JSON.parse(success.body);
+					console.log(user_info);
+	$("#user_information div").eq(0).find("span").text(user_info.displayName);
+      $("#user-information div").eq(1).find("span").text(user_info.id);
+					$("#user-information div").eq(2).find("span").text(user_info.gender);
+					$("#user-information div").eq(3).find("span").html('<img src="' + user_info.image.url + '" />');
+					$("#user-information div").eq(4).find("span").text(user_info.emails[0].value);
+
+$("#user_information").show();
+$("#login-button").hide();
+
+},
+function(error){
+	$("#login-button").removeAttr('disabled');
+alert('Error:failed to et user user information');
+}
+
+		);
+},
+function(error){
+	$("#login-button").removeAttr('disabled');
+	alert('Error:login failed');
+}	
+
+);
+});
+
+</script>
+</body>
+</html>
+
+

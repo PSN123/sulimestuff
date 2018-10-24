@@ -1,0 +1,157 @@
+<html>
+<head>
+	<title>CupCake</title>
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style type="text/css">
+	*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+header{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url('images/cupps.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height:100vh;
+}
+body{
+	font-size: 20px;
+overflow-x: hidden;
+color:white;
+font-family: 'Flamenco', cursive;
+}
+.clearfix:after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+height: s
+}
+
+.row{
+	max-width: 1180px;
+margin:0 auto;
+}
+.main-nav{
+	float: right;
+	margin-top: 50px;
+}
+
+.main-nav li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 40px;
+}
+.main-nav li a{
+	padding: 5px 0;
+color:#fff;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 20px;
+font-weight: 100;
+}
+
+.main-content-header{
+	width:1180px;
+	position: absolute;
+	/*border:1px solid black;*/
+	top:55%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+h1{
+	color:#fff;
+	font-size: 240%;
+ letter-spacing: 3px;
+ margin-bottom:20px;
+ text-transform: uppercase;
+}
+
+.btn{
+display:inline-block; 
+padding: 10px 30px;
+font-weight: lighter;
+text-decoration: none;
+text-transform: uppercase;
+transition:background-color 0.2,border 0.2,color 0.2;
+}
+.btn-full{
+	background-color: transparent;
+	color:#bf55ec;
+	margin-right: 15px;
+	border:1px solid #bf55ec;
+	
+}
+.btn-n{
+color:white;
+border:1px solid #fff;
+}
+.main-nav li a:hover{
+	border-bottom: 2px solid #bf55ec;
+
+}
+.btn-n:hover{
+	background-color: #bf55ec;
+
+}
+.btn-full:hover{
+	background-color: white;
+}
+.colorchange{
+	animation: colorchange 1s infinite;
+}
+@keyframes colorchange{
+	0%{color:red;}
+	25%{color:black;}
+	50%{color:#bf55ec;}
+100%{color:yellow;}
+}
+
+.icon{display: none;}
+/*Responsive query*/
+
+@media only screen and(max-width:1180px){
+	.main-content-header{
+		width:50%;
+		padding:0 10%; 
+	}
+}
+
+/*//////////////////////////////*/
+</style>
+<body>
+
+<header>
+	<nav>
+<div class="row">
+	<!-- <img src="images/cupps.jpg" class="logo"> -->
+
+<ul class="main-nav animated slideInDown">
+	<li><a href="#">Cakes</a></li>
+<li><a href="#">how</a></li>
+<li><a href="#">check more</a></li>
+<li><a href="#">Sign up</a></li>
+</ul>
+
+</div>
+</nav>
+<div class="main-content-header">
+<h1>Welcome to <spna class="colorchange">Negi Cakes</spna>.<br>
+House of cakes and pastries</h1>
+<a href="#" class="btn btn-full">click me</a>
+<a href="#" class="btn btn-n">click me</a>
+</div>
+</header>
+
+</script>
+
+
+</body>
+</html>
