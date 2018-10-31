@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style >
+	#clear{
+		width: 275px;
+	}
+
+	.main{
+		width: 300px;
+		height:310px;
+		position: absolute;
+		top:30%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		margin:auto;
+	padding: 0,0,0,0;
+	text-align: center;
+
+		border:3px solid black;
+	} 
+	input{
+		width: 90px;
+		height: 30px;
+		background-color: black;
+	color:white;
+	}
+	#ans{
+		width: 275px;
+	}
+</style>
+</head>
+<body>
+<div class="main">
+<form name="cforms">
+	<input type="text" name="ans" id="ans"></<br><br>
+	<input type="button" value="1" onclick="cforms.ans.value+='1'">
+	<input type="button" value="2" onclick="cforms.ans.value+='2'">
+	<input type="button" value="3" onclick="cforms.ans.value+='3'">
+	<br><br>
+
+
+	<input type="button" value="4" onclick="cforms.ans.value+='4'">
+	<input type="button" value="5" onclick="cforms.ans.value+='5'">
+	<input type="button" value="6" onclick="cforms.ans.value+='6'">
+    <br><br>
+
+	<input type="button" value="7" onclick="cforms.ans.value+='7'">
+	<input type="button" value="8" onclick="cforms.ans.value+='8'">
+	<input type="button" value="9" onclick="cforms.ans.value+='9'">
+
+	<br><br>
+	<input type="button" value="0" onclick="cforms.ans.value+='0'">
+	<input type="button" value="+" onclick="cforms.ans.value+='+'">
+	<input type="button" value="-" onclick="cforms.ans.value+='-'">
+
+	<br><br>
+	<input type="button" value="/" onclick="cforms.ans.value+='/'">
+	<input type="button" value="*" onclick="cforms.ans.value+='*'">
+	<input type="button" value="=" onclick="cforms.ans.value =eval(cforms.ans.value)"><br><br>
+	<input type="button" value="clear All" onclick="cforms.ans.value=' '" id="clear">
+	<!-- <input type="button" value="1" onclick="cforms.ans.value+='1'"> -->
+
+</form>
+</div>
+
+
+</body>
+</html>
